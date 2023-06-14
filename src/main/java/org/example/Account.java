@@ -16,7 +16,7 @@ public class Account {
         }
 
         int checksum = Integer.parseInt(accountNumber.substring(0, 3) + accountNumber.substring(4, 11)) % 97;
-        if (checksum != Integer.parseInt(accountNumber.substring(13,14))) {
+        if (checksum != Integer.parseInt(accountNumber.substring(12))) {
             throw new NotCorrectFormatException("Incorrect account number.");
         }
     }
